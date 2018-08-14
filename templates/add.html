@@ -1,0 +1,10 @@
+<html>
+<head></head>
+ <body>
+  <form method='post' action='.' enctype="multipart/form-data">
+    {% csrf_token %}
+      {{form.as_p}}
+    <button>add</button> 
+  </form>
+</body>
+</html>

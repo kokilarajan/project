@@ -1,0 +1,31 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+  <body>
+     <form method="post" action='.' enctype="multipart/form-data">
+		
+		{% csrf_token %}
+		<h2>Book Details</h2>
+		CATEGORY :{{catg_type}}<br>
+		BOOK NAME :{{buk_name}}<br>
+		AUTHOR :{{buk_author}}<br>
+		PRICE :{{buk_price}}<br>
+		Status:{{status}}<br>
+		<img src="{{buk_cover.url}}" style="width:250px; height: :200px;"><br>
+
+		<p>the book will be reached within 20 days</p>
+ 		<button><a href={% static url 'abt' %}>buy </button>
+   
+
+
+
+	</form>
+</body>
+</html>

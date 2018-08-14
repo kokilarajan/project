@@ -1,0 +1,31 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+  <body>
+     <form method='post' action='.' enctype='multipart/form-data'>
+
+      {% csrf_token %}
+      <!-- 
+      {% for x in data %}
+    <div style="background-color:lightgreen; margin:25px; padding:50px;">  
+       <h2 align="center" >Category:{{x.cat_type}}</h2><br>
+        <div style="float:right; "> -->
+        Name: {{form.cust_name}}<br>
+        Address:{{form.cust_address}}<br>
+        Bookname:{{form.buk_name}}<br>
+
+      
+      <a href={% url 'bY_NW' %}></a>
+      
+    
+      <!-- {% endfor %} -->
+    </form>
+    </body>
+</html>

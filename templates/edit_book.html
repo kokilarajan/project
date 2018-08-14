@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+
+ 
+   <div>
+    <ul class="nav navbar-nav navbar-left">
+      
+     <li class="active"><a href={% url 'adminhome' %}>Home</a></li>
+      <li><a href={% url 'book_add' %}>Add Book</a></li>
+        <li><a href={% url 'al_buk' %}>View Book & Edit</a></li>
+        <li><a href={% url 'logout' %}>Logout</a></li>
+       
+    </ul>
+  </div>
+  
+  
+	<form method="post" action='.' enctype="multipart/form-data">
+		
+		{% csrf_token %}
+		<!-- {{form.cat_type}}<br>
+	
+		{{form.book_cover}}<br>
+		{{form.book_name}}<br>
+		{{form.book_author}}<br>
+		{{form.book_price}}<br>
+		{{form.status}}<br> -->
+		{{form.as_p}}
+		
+
+ <button>EDIT</button>
+</form>
+</body>
+</html>

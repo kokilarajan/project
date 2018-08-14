@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+   
+
+
+</head>
+  <body><br>
+    <br>
+    <br>
+    <br>
+ <h1 align="center">LOGIN</h1>
+<div align="center">
+  <form method="post">
+    {% csrf_token %}
+
+    Username :{{form.username}}<br>
+    Password :{{form.password}}<br><br>
+
+
+   <!--  {{ form.as_p }} -->
+     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha" data-sitekey="6LdYDWYUAAAAAJJlck0WCr82F3FaT6Yq7p3e6PeA"></div>
+
+    <button type="submit"><a href={% url 'home' %}>login</a></button><br>
+    <p>New User Register here <a href={%   url 'register' %}><b>click here>></b></a></p>
+    <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
+
+  </form>
+</div>
+</body>
+<style>
+  body{
+  background-image: url("{% static 'img/book.jpg' %} ");
+  background-size: cover;
+}
+</style>
+</html>
+  
